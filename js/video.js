@@ -52,7 +52,7 @@ document.querySelector("#mute").addEventListener("click", function(){
 		video.muted=true;
 		document.querySelector("#mute").innerHTML="Unmute";//next time we click it will unmute
 		
-	}else if(video.muted==true){
+	}else if(video.muted==true || document.querySelector("#mute").innerHTML=="Unmute" ){
 		console.log("unmuted");
 		video.muted=false;
 		document.querySelector("#mute").innerHTML="Mute";//next time we click it will mute
