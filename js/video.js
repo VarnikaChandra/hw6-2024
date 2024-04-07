@@ -47,17 +47,19 @@ document.querySelector("#skip").addEventListener("click", function(){
 });
 
 document.querySelector("#mute").addEventListener("click", function(){
-	if(video.muted){//if mute is on
-		console.log("unmuted");
-		video.muted=false;
-		document.querySelector("#mute").innerHTML="Mute";//next time we click it will mute
-	}else{
+	if(video.muted==false){//if mute is on
 		console.log("mute");
 		video.muted=true;
 		document.querySelector("#mute").innerHTML="Unmute";//next time we click it will unmute
+		
+	}else if(video.muted==true){
+		console.log("unmuted");
+		video.muted=false;
+		document.querySelector("#mute").innerHTML="Mute";//next time we click it will mute
 	}
 	
 });
+
 document.querySelector("#slider").addEventListener("input", function(){
 	console.log("sliderrr");
 	video.volume=this.value/100;//slider
