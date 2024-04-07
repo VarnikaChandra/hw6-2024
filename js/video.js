@@ -49,11 +49,11 @@ document.querySelector("#skip").addEventListener("click", function(){
 document.querySelector("#mute").addEventListener("click", function(){
 	if(video.mute){//if mute is on
 		console.log("unmuted");
-		video.mute=false;
+		video.muted=false;
 		document.querySelector("#mute").innerHTML="Mute";//next time we click it will mute
 	}else{
 		console.log("mute");
-		video.mute=true;
+		video.muted=true;
 		document.querySelector("#mute").innerHTML="Unmute";//next time we click it will unmute
 	}
 	
